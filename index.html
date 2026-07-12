@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDANCE · Taller de Baile del Municipio de San Sebastián</title>
+  <meta name="description" content="IDANCE Performing Studio — el taller de baile del Municipio de San Sebastián, Puerto Rico. Donde el movimiento se convierte en arte. Clases de hip hop, jazz, ballet, contemporáneo y performance para todas las edades." />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IDANCE · Taller de Baile del Municipio de San Sebastián" />
+  <meta property="og:description" content="Donde el movimiento se convierte en arte. Formamos bailarines que representan a San Sebastián dentro y fuera de la isla." />
+  <meta property="og:image" content="assets/logo.jpg" />
+  <meta name="theme-color" content="#0a0a0f" />
+
+  <!-- Favicon: reemplaza assets/logo.jpg por el logo real; el emoji es respaldo -->
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💃</text></svg>" />
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- ====== FONDO DE ESCENARIO (haces de luz neón en movimiento) ====== -->
+  <div class="stage" aria-hidden="true">
+    <span class="beam beam--magenta"></span>
+    <span class="beam beam--cyan"></span>
+    <span class="beam beam--yellow"></span>
+    <span class="beam beam--purple"></span>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ====== NAVEGACIÓN ====== -->
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#top" aria-label="IDANCE inicio">
+      <span class="nav__mark">iD</span>
+      <span class="nav__name">IDANCE</span>
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#experiencia">Escenario</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn--sm nav__cta" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">Inscríbete</a>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <main>
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">San Sebastián <span>·</span> Puerto Rico</p>
+
+        <h1 class="hero__title reveal">
+          <span class="hero__word">IDANCE</span>
+        </h1>
+
+        <p class="hero__tagline reveal">Taller de Baile del Municipio de San Sebastián</p>
+
+        <p class="hero__lead reveal">
+          Donde el movimiento se convierte en arte. Formamos bailarines que
+          representan a San Sebastián con orgullo — dentro y fuera de la isla.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#contacto">Únete al taller</a>
+          <a class="btn btn--ghost" href="#disciplinas">Ver disciplinas</a>
+        </div>
+      </div>
+
+      <!-- Silueta de bailarín con glow (eco del logo) -->
+      <svg class="dancer" viewBox="0 0 220 420" aria-hidden="true" focusable="false">
+        <path d="M150 34c8-2 16 4 17 12 1 9-6 17-15 17-6 0-11-3-14-8l-24 8 34 10c7 2 12 8 12 16l-2 40 22 46c4 8 0 18-8 21-8 3-17-1-20-9l-20-44-8 46 20 62c3 9-2 18-11 20-8 2-16-3-19-11l-18-58-12 60c-2 9-10 15-19 13-9-2-15-11-13-20l16-84-6-70-20 26c-5 7-15 8-21 3-7-5-8-15-3-21l30-40c4-5 10-8 16-8l38-2-28-8c-9-3-14-12-11-21 2-7 8-11 15-11l70-1z"/>
+      </svg>
+
+      <a class="hero__scroll" href="#nosotros" aria-label="Bajar">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ====== MARQUEE DE ESTILOS ====== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Hip Hop</span><i>✷</i><span>Jazz Funk</span><i>✷</i><span>Ballet</span><i>✷</i>
+        <span>Contemporáneo</span><i>✷</i><span>Urbano</span><i>✷</i><span>Coreografía</span><i>✷</i>
+        <span>Performance</span><i>✷</i><span>Kids</span><i>✷</i><span>Teens</span><i>✷</i>
+        <span>Hip Hop</span><i>✷</i><span>Jazz Funk</span><i>✷</i><span>Ballet</span><i>✷</i>
+        <span>Contemporáneo</span><i>✷</i><span>Urbano</span><i>✷</i><span>Coreografía</span><i>✷</i>
+        <span>Performance</span><i>✷</i><span>Kids</span><i>✷</i><span>Teens</span><i>✷</i>
+      </div>
+    </div>
+
+    <!-- ====== NOSOTROS ====== -->
+    <section class="section" id="nosotros">
+      <div class="section__head reveal">
+        <span class="tag">Nosotros</span>
+        <h2>Del corazón de la montaña<br />al escenario.</h2>
+      </div>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            <strong>IDANCE Performing Studio</strong> es el taller de baile del
+            Municipio de San Sebastián, en la región centro-oeste de Puerto Rico.
+            Un espacio donde niños, jóvenes y adultos descubren su pasión por el
+            baile y la convierten en disciplina, comunidad y arte.
+          </p>
+          <p>
+            Aquí no solo se aprende una coreografía: se forma carácter, confianza
+            y un equipo que sube al escenario como familia. Nuestros bailarines
+            han llevado el nombre de San Sebastián y de Puerto Rico a
+            competencias y presentaciones internacionales.
+          </p>
+        </div>
+
+        <ul class="manifesto reveal">
+          <li><span>01</span> Todas las edades — desde kids hasta adultos.</li>
+          <li><span>02</span> Formación real: técnica, ritmo y presencia escénica.</li>
+          <li><span>03</span> Un equipo que representa a San Sebastián con orgullo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== DISCIPLINAS ====== -->
+    <section class="section" id="disciplinas">
+      <div class="section__head reveal">
+        <span class="tag">Disciplinas</span>
+        <h2>Encuentra tu ritmo.</h2>
+        <p class="section__sub">
+          Programas para cada edad y cada nivel. Elige por dónde empezar —
+          o pruébalas todas.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card card--magenta reveal">
+          <span class="card__num">01</span>
+          <h3>Hip Hop &amp; Urbano</h3>
+          <p>Energía de la calle, groove y estilo. La base del movimiento urbano moderno.</p>
+        </article>
+        <article class="card card--cyan reveal">
+          <span class="card__num">02</span>
+          <h3>Jazz Funk</h3>
+          <p>Fuerza, actitud y musicalidad. Coreografías potentes para brillar en el escenario.</p>
+        </article>
+        <article class="card card--yellow reveal">
+          <span class="card__num">03</span>
+          <h3>Ballet</h3>
+          <p>La técnica que lo sostiene todo: postura, control y elegancia en cada línea.</p>
+        </article>
+        <article class="card card--purple reveal">
+          <span class="card__num">04</span>
+          <h3>Contemporáneo</h3>
+          <p>Emoción en movimiento. Interpretación, fluidez y conexión con la música.</p>
+        </article>
+        <article class="card card--magenta reveal">
+          <span class="card__num">05</span>
+          <h3>Coreografía &amp; Performance</h3>
+          <p>El equipo de competencia. Montajes que llevamos a tarima dentro y fuera de la isla.</p>
+        </article>
+        <article class="card card--cyan reveal">
+          <span class="card__num">06</span>
+          <h3>Kids &amp; Teens</h3>
+          <p>Primeros pasos con disciplina y diversión. Donde nace el amor por el baile.</p>
+        </article>
+      </div>
+
+      <!-- NOTA: Ajusta las disciplinas y descripciones según la oferta real del taller. -->
+    </section>
+
+    <!-- ====== EXPERIENCIA / ESCENARIO ====== -->
+    <section class="section stagesec" id="experiencia">
+      <div class="stagesec__inner">
+        <div class="section__head reveal">
+          <span class="tag">Escenario</span>
+          <h2>Del salón al mundo.</h2>
+        </div>
+        <p class="stagesec__lead reveal">
+          El trabajo del taller no se queda entre cuatro paredes. Nuestros
+          bailarines han representado a Puerto Rico en escenarios
+          internacionales — incluyendo Colombia — llevando el talento de
+          San Sebastián a competir con lo mejor.
+        </p>
+        <div class="pills reveal">
+          <span class="pill">🇵🇷 Representación de Puerto Rico</span>
+          <span class="pill">🌎 Presentaciones internacionales</span>
+          <span class="pill">🏆 Equipo de competencia</span>
+          <span class="pill">🎭 Espectáculos y recitales</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACTO ====== -->
+    <section class="section" id="contacto">
+      <div class="contact">
+        <div class="contact__text reveal">
+          <span class="tag">Contacto</span>
+          <h2>¿List@ para bailar?</h2>
+          <p>
+            Escríbenos por nuestras redes para conocer horarios, matrícula y
+            próximas presentaciones. Te esperamos en el taller.
+          </p>
+          <p class="contact__loc">📍 San Sebastián, Puerto Rico</p>
+          <!-- NOTA: Agrega aquí teléfono, dirección exacta y correo cuando los tengas. -->
+        </div>
+
+        <div class="contact__actions reveal">
+          <a class="social social--fb" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">
+            <span class="social__ico">f</span>
+            <span>
+              <strong>Facebook</strong>
+              <small>idance.performingstudio</small>
+            </span>
+            <span class="social__arrow">↗</span>
+          </a>
+          <a class="social social--ig" href="https://www.instagram.com/idanceperforming/" target="_blank" rel="noopener">
+            <span class="social__ico">◎</span>
+            <span>
+              <strong>Instagram</strong>
+              <small>@idanceperforming</small>
+            </span>
+            <span class="social__arrow">↗</span>
+          </a>
+          <a class="btn btn--primary btn--block" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">
+            Reserva tu clase
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="nav__mark">iD</span>
+      <div>
+        <strong>IDANCE</strong>
+        <small>Taller de Baile del Municipio de San Sebastián</small>
+      </div>
+    </div>
+    <p class="footer__tag">Donde el movimiento se convierte en arte.</p>
+    <div class="footer__links">
+      <a href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/idanceperforming/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#top">Volver arriba ↑</a>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> IDANCE Performing Studio · San Sebastián, PR</p>
+  </footer>
+
+  <script src="assets/script.js" defer></script>
+</body>
+</html>
