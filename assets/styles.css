@@ -186,6 +186,50 @@ img, svg { display: block; max-width: 100%; }
 }
 .nav__cta:hover { background: var(--yellow); transform: translateY(-2px); }
 
+/* Botón de pagos */
+.btn--pay {
+  position: relative;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--cyan), var(--purple));
+  box-shadow: 0 0 24px rgba(33, 193, 240, 0.35);
+}
+.btn--pay:hover { transform: translateY(-3px); box-shadow: 0 8px 34px rgba(138, 43, 226, 0.55); }
+.btn__ico { font-size: 1.15em; line-height: 1; }
+.btn__hint {
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.18);
+}
+/* Placeholder: se ve activo pero aún no enlaza a ningún lado */
+.btn--pay[data-pay-placeholder] { cursor: default; }
+
+/* Aviso emergente (toast) */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translate(-50%, 140%);
+  z-index: 200;
+  padding: 0.9rem 1.4rem;
+  border-radius: 100px;
+  background: rgba(18, 18, 28, 0.96);
+  border: 1px solid rgba(33, 193, 240, 0.5);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s var(--ease), opacity 0.4s;
+  opacity: 0;
+  pointer-events: none;
+  max-width: 90vw;
+  text-align: center;
+}
+.toast.is-visible { transform: translate(-50%, 0); opacity: 1; }
+
 /* ============================================================
    HERO
    ============================================================ */
