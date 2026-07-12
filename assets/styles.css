@@ -294,20 +294,31 @@ img, svg { display: block; max-width: 100%; }
 
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* Silueta de bailarín */
+/* Silueta de bailarín (máscara extraída del logo) que cambia de color */
 .dancer {
   position: absolute;
-  right: clamp(-4rem, 2vw, 4rem);
+  --dancer-h: min(86vh, 700px);
+  right: clamp(-3rem, 3vw, 5rem);
   bottom: 0;
-  height: min(88vh, 720px);
-  width: auto;
+  height: var(--dancer-h);
+  width: calc(var(--dancer-h) * 302 / 542);
   z-index: 1;
-  fill: url(#none);
-  fill: var(--magenta);
-  opacity: 0.9;
-  filter: drop-shadow(0 0 40px rgba(255, 31, 180, 0.55)) drop-shadow(0 0 90px rgba(138, 43, 226, 0.35));
-  animation: sway 6s ease-in-out infinite;
+  opacity: 0.95;
+  background-color: var(--magenta);
+  -webkit-mask: url("dancer.png") no-repeat center bottom / contain;
+  mask: url("dancer.png") no-repeat center bottom / contain;
+  animation: dancerColor 14s linear infinite, sway 6s ease-in-out infinite;
   pointer-events: none;
+}
+/* Cicla los colores de la marca con glow a juego.
+   Orden cyan→magenta→amarillo→violeta: cyan y amarillo nunca quedan
+   adyacentes, así la mezcla no pasa por verde. */
+@keyframes dancerColor {
+  0%,
+  100% { background-color: #21c1f0; filter: drop-shadow(0 0 42px rgba(33, 193, 240, 0.6)); }
+  25%  { background-color: #ff1fb4; filter: drop-shadow(0 0 42px rgba(255, 31, 180, 0.6)); }
+  50%  { background-color: #ffd400; filter: drop-shadow(0 0 42px rgba(255, 212, 0, 0.55)); }
+  75%  { background-color: #8a2be2; filter: drop-shadow(0 0 42px rgba(138, 43, 226, 0.6)); }
 }
 @keyframes sway {
   0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -612,7 +623,7 @@ img, svg { display: block; max-width: 100%; }
 
   .about { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }
-  .dancer { opacity: 0.35; height: 60vh; right: -6rem; }
+  .dancer { opacity: 0.3; --dancer-h: 62vh; right: -5rem; }
 }
 
 @media (max-width: 520px) {
