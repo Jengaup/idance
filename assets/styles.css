@@ -517,7 +517,13 @@ img, svg { display: block; max-width: 100%; }
   align-items: center;
   gap: 1rem;
 }
-.footer__brand { display: flex; align-items: center; gap: 0.8rem; }
+.footer__brand { display: flex; align-items: center; gap: 0.9rem; }
+.footer__logo {
+  width: 72px; height: 72px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 0 26px rgba(255, 31, 180, 0.35);
+}
 .footer__brand strong { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 0.03em; display: block; }
 .footer__brand small { color: var(--fog); font-size: 0.85rem; }
 .footer__brand > div { text-align: left; }
