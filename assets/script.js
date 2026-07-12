@@ -55,4 +55,26 @@
   /* ---- Año en el footer ---- */
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
+
+  /* ---- Botón de pagos (placeholder sin enlace todavía) ---- */
+  let toastTimer;
+  const showToast = (msg) => {
+    let toast = document.querySelector(".toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "toast";
+      toast.setAttribute("role", "status");
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    requestAnimationFrame(() => toast.classList.add("is-visible"));
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 3200);
+  };
+  document.querySelectorAll("[data-pay-placeholder]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      showToast("💳 El pago en línea estará disponible muy pronto.");
+    });
+  });
 })();
