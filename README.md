@@ -13,7 +13,7 @@ con estética de escenario neón basada en los colores del logo.
 index.html            → página principal
 assets/styles.css     → estilos (tema neón, responsive, accesible)
 assets/script.js      → nav móvil, scroll-reveal, año dinámico
-assets/logo.jpg       → ⚠️ AGREGA AQUÍ el logo (ver assets/README.md)
+assets/Idancelogo.jpg → logo oficial (favicon, Open Graph y footer)
 .nojekyll             → sirve la carpeta assets sin procesar con Jekyll
 .github/workflows/    → despliegue automático a GitHub Pages
 ```
@@ -41,7 +41,7 @@ La URL será algo como: `https://<usuario>.github.io/idance/`
 Todo el contenido está en `index.html`. Busca los comentarios `<!-- NOTA: ... -->`
 para saber qué conviene ajustar con datos reales:
 
-- **Logo:** guarda `assets/logo.jpg` (ver `assets/README.md`).
+- **Logo:** `assets/Idancelogo.jpg` (ver `assets/README.md`).
 - **Disciplinas:** ajusta las tarjetas a las clases reales del taller.
 - **Contacto:** agrega teléfono, dirección exacta y correo cuando los tengas.
 - **Fotos:** puedes añadir galería con imágenes reales de presentaciones.
