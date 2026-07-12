@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEGURIDAD ======
+       Política de contenido estricta: solo se permiten recursos del propio
+       sitio, más Google Fonts. Bloquea scripts/estilos externos, inyecciones
+       y marcos no autorizados. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
   <title>IDANCE · Taller de Baile del Municipio de San Sebastián</title>
   <meta name="description" content="IDANCE Performing Studio — el taller de baile del Municipio de San Sebastián, Puerto Rico. Donde el movimiento se convierte en arte. Clases de hip hop, jazz, ballet, contemporáneo y performance para todas las edades." />
+  <link rel="canonical" href="https://jengaup.github.io/idance/" />
 
   <!-- Open Graph / redes sociales -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IDANCE Performing Studio" />
+  <meta property="og:locale" content="es_PR" />
+  <meta property="og:url" content="https://jengaup.github.io/idance/" />
   <meta property="og:title" content="IDANCE · Taller de Baile del Municipio de San Sebastián" />
   <meta property="og:description" content="Donde el movimiento se convierte en arte. Formamos bailarines que representan a San Sebastián dentro y fuera de la isla." />
-  <meta property="og:image" content="assets/Idancelogo.jpg" />
+  <meta property="og:image" content="https://jengaup.github.io/idance/assets/Idancelogo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IDANCE · Taller de Baile del Municipio de San Sebastián" />
+  <meta name="twitter:description" content="Donde el movimiento se convierte en arte. Clases de baile en San Sebastián, Puerto Rico." />
+  <meta name="twitter:image" content="https://jengaup.github.io/idance/assets/Idancelogo.jpg" />
   <meta name="theme-color" content="#0a0a0f" />
 
   <!-- Favicon: logo oficial de IDANCE; el emoji queda de respaldo -->
@@ -23,6 +39,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Datos estructurados: ayudan a Google a mostrar el taller como escuela de baile local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DanceSchool",
+    "name": "IDANCE Performing Studio",
+    "alternateName": "Taller de Baile del Municipio de San Sebastián",
+    "description": "Taller de baile del Municipio de San Sebastián, Puerto Rico. Clases de hip hop, jazz, ballet, contemporáneo y performance para todas las edades.",
+    "url": "https://jengaup.github.io/idance/",
+    "logo": "https://jengaup.github.io/idance/assets/Idancelogo.jpg",
+    "image": "https://jengaup.github.io/idance/assets/Idancelogo.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Sebastián",
+      "addressRegion": "PR",
+      "addressCountry": "PR"
+    },
+    "areaServed": "San Sebastián, Puerto Rico",
+    "sameAs": [
+      "https://www.facebook.com/idance.performingstudio/",
+      "https://www.instagram.com/idanceperforming/"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ====== FONDO DE ESCENARIO (haces de luz neón en movimiento) ====== -->
@@ -45,9 +86,9 @@
       <a href="#disciplinas">Disciplinas</a>
       <a href="#experiencia">Escenario</a>
       <a href="#contacto">Contacto</a>
-      <a class="nav__menu-cta btn btn--primary" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">Inscríbete</a>
+      <a class="nav__menu-cta btn btn--primary" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener noreferrer">Inscríbete</a>
     </nav>
-    <a class="btn btn--sm nav__cta" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">Inscríbete</a>
+    <a class="btn btn--sm nav__cta" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener noreferrer">Inscríbete</a>
     <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -211,7 +252,7 @@
         </div>
 
         <div class="contact__actions reveal">
-          <a class="social social--fb" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">
+          <a class="social social--fb" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener noreferrer">
             <span class="social__ico">f</span>
             <span>
               <strong>Facebook</strong>
@@ -219,7 +260,7 @@
             </span>
             <span class="social__arrow">↗</span>
           </a>
-          <a class="social social--ig" href="https://www.instagram.com/idanceperforming/" target="_blank" rel="noopener">
+          <a class="social social--ig" href="https://www.instagram.com/idanceperforming/" target="_blank" rel="noopener noreferrer">
             <span class="social__ico">◎</span>
             <span>
               <strong>Instagram</strong>
@@ -227,7 +268,7 @@
             </span>
             <span class="social__arrow">↗</span>
           </a>
-          <a class="btn btn--primary btn--block" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">
+          <a class="btn btn--primary btn--block" href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener noreferrer">
             Reserva tu clase
           </a>
 
@@ -255,8 +296,8 @@
     </div>
     <p class="footer__tag">Donde el movimiento se convierte en arte.</p>
     <div class="footer__links">
-      <a href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.instagram.com/idanceperforming/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/idance.performingstudio/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.instagram.com/idanceperforming/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="#top">Volver arriba ↑</a>
     </div>
     <p class="footer__copy">© <span id="year"></span> IDANCE Performing Studio · San Sebastián, PR</p>
